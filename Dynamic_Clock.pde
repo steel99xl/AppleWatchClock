@@ -1,3 +1,5 @@
+/// by steel99xl
+/// yes the hands follow the rings
 float x = width + height;
 void setup(){
   size(400, 400);
@@ -10,7 +12,7 @@ void draw(){
   background(0);
   rotate(-33);
   noFill();
-  
+  /// Rings and Time
   stroke(255,100,150);
   strokeWeight(8);
   float s = map(second(), 0, 60, 0, 2*PI);
@@ -23,7 +25,7 @@ void draw(){
   stroke(150,255,100);
   float h = map(hour() % 12 + norm(minute(), 0, 60), 0, 24, 0, TWO_PI * 2);
   arc(0, 0, height/1.45,width/1.45,0,h);
-  
+ /// Hands folowing rings 
   pushMatrix();
   rotate(h);
   stroke(0,255,0);
